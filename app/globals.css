@@ -1,0 +1,145 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+
+  html {
+    background-color: #000;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-obsidian font-sans text-platinum-soft antialiased;
+    font-feature-settings: "ss01", "cv11";
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    background: rgba(52, 211, 153, 0.3);
+    color: #fff;
+  }
+
+  :focus-visible {
+    outline: 2px solid rgba(52, 211, 153, 0.8);
+    outline-offset: 3px;
+    border-radius: 6px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+    }
+  }
+}
+
+@layer components {
+  /* Frosted glass, the core material. */
+  .glass {
+    @apply border border-hairline bg-white/[0.035] shadow-glass backdrop-blur-2xl;
+  }
+
+  .glass-strong {
+    @apply border border-hairline bg-black/60 backdrop-blur-2xl;
+  }
+
+  /* White fading to platinum, used on large headlines. */
+  .text-gradient {
+    @apply bg-text-platinum bg-clip-text text-transparent;
+  }
+
+  .text-gradient-photon {
+    background-image: linear-gradient(180deg, #a7f3d0 0%, #34d399 55%, #10b981 100%);
+    @apply bg-clip-text text-transparent;
+  }
+
+  .text-gradient-ember {
+    background-image: linear-gradient(180deg, #fde68a 0%, #fbbf24 55%, #f59e0b 100%);
+    @apply bg-clip-text text-transparent;
+  }
+
+  .eyebrow {
+    @apply text-[0.8125rem] font-medium tracking-[0.01em] text-photon-light;
+  }
+
+  .hairline-x {
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.12), transparent);
+    height: 1px;
+  }
+
+  /* Range slider, styled once for every calculator control. */
+  .range {
+    @apply h-6 w-full cursor-pointer appearance-none bg-transparent;
+    --fill: 50%;
+  }
+  .range::-webkit-slider-runnable-track {
+    height: 4px;
+    border-radius: 999px;
+    background: linear-gradient(90deg, #34d399 0 var(--fill), rgba(255, 255, 255, 0.12) var(--fill) 100%);
+  }
+  .range::-moz-range-track {
+    height: 4px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.12);
+  }
+  .range::-moz-range-progress {
+    height: 4px;
+    border-radius: 999px;
+    background: #34d399;
+  }
+  .range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    margin-top: -10px;
+    height: 24px;
+    width: 24px;
+    border-radius: 999px;
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(0, 0, 0, 0.1);
+    transition: transform 160ms cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+  .range::-moz-range-thumb {
+    height: 24px;
+    width: 24px;
+    border: 0;
+    border-radius: 999px;
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  }
+  .range:active::-webkit-slider-thumb {
+    transform: scale(1.12);
+  }
+  .range:focus-visible {
+    outline: none;
+  }
+  .range:focus-visible::-webkit-slider-thumb {
+    box-shadow: 0 0 0 4px rgba(52, 211, 153, 0.45), 0 2px 10px rgba(0, 0, 0, 0.5);
+  }
+  .range:focus-visible::-moz-range-thumb {
+    box-shadow: 0 0 0 4px rgba(52, 211, 153, 0.45), 0 2px 10px rgba(0, 0, 0, 0.5);
+  }
+}
+
+@layer utilities {
+  .tabular {
+    font-variant-numeric: tabular-nums;
+  }
+  .no-scrollbar {
+    scrollbar-width: none;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+}

@@ -33,7 +33,7 @@ Most text lives in plain TypeScript files, so updates don't require touching pag
 | Team and board | `lib/content/team.ts` |
 | Mission goals and values | `lib/content/mission.ts` |
 | Energy-as-a-Service packages, prices, how it works, pilot, energy-gap stats | `lib/content/eaas.ts` |
-| Donation details (PayPal, mobile money, bank) | `lib/content/donate.ts` |
+| Donation details (WhatsApp link for international gifts, mobile money, bank) | `lib/content/donate.ts` |
 | Impact calculator assumptions | `lib/impact.ts` |
 
 Images go in `public/images/…` and videos in `public/videos/…`. Reference them from content files with a path

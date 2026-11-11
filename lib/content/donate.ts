@@ -1,21 +1,21 @@
 export const donation = {
-  paypal: {
-    handle: "ecolightzm",
-    email: "ecolight.zm@gmail.com",
-    link: (amountUsd?: number) =>
-      `https://www.paypal.com/paypalme/ecolightzm${amountUsd && amountUsd > 0 ? `/${amountUsd}USD` : ""}`,
+  // PayPal is unavailable for now, so international donors arrange their gift with us on WhatsApp.
+  international: {
+    whatsapp: "https://wa.link/r67je1",
   },
   mobileMoney: {
     number: "+260 97 3032559",
     providers: ["Airtel Money", "M-PESA", "PawaPay"],
   },
-  // Exactly as published on the previous site. The account name must match the bank's records.
+  // Ecobank account details as provided by EcoLight. The account name must match the bank's records exactly.
   bank: [
-    { label: "Bank", value: "EcoBank Zambia" },
-    { label: "Account name", value: "Vanny Kasahi" },
-    { label: "Account number", value: "5622500005543" },
+    { label: "Bank", value: "Ecobank Zambia" },
+    { label: "Account name", value: "ECOLIGHT INNOVATION" },
+    { label: "Account number", value: "5622500009342" },
+    { label: "Account type", value: "Savings" },
+    { label: "Branch", value: "Ecobank Cairo Road, Lusaka, Zambia" },
     { label: "SWIFT code", value: "ECOCZMLU" },
-    { label: "Branch", value: "Eco Bank, Cairo Road" },
+    { label: "Branch code", value: "360003" },
     { label: "Reference", value: "Donation" },
   ],
   oneTimeAmounts: [10, 25, 50, 100],

@@ -3,6 +3,7 @@
 import { ArrowUpRight, Handshake, Landmark, Repeat, Smartphone } from "lucide-react";
 import { useId, useState } from "react";
 import { ButtonLink, buttonClasses } from "@/components/ui/button";
+import { WhatsAppIcon } from "@/components/ui/brand-icons";
 import { CopyButton } from "@/components/ui/copy-button";
 import { RevealGroup, RevealItem } from "@/components/ui/reveal";
 import { donation } from "@/lib/content/donate";
@@ -104,7 +105,7 @@ export function DonationOptions() {
       "Full name: ",
       "Phone number: ",
       `Monthly contribution: $${monthly || "__"} USD`,
-      "Preferred payment method (Mobile Money / PayPal / Bank transfer): ",
+      "Preferred payment method (Mobile Money / Bank transfer): ",
       "Start date: ",
       "Comments (optional): ",
       "",
@@ -127,18 +128,18 @@ export function DonationOptions() {
 
         <div className="mt-8 space-y-4">
           <div className="rounded-3xl border border-hairline bg-white/[0.02] p-5">
-            <p className="text-sm font-medium text-white">International: PayPal or card</p>
+            <p className="text-sm font-medium text-white">International gifts</p>
             <p className="mt-1 text-sm text-platinum">
-              Sent securely through PayPal to <span className="text-platinum-soft">{donation.paypal.email}</span>.
+              PayPal is temporarily unavailable. Message us on WhatsApp and we&apos;ll help you give another way.
             </p>
             <a
-              href={donation.paypal.link(oneTime)}
+              href={donation.international.whatsapp}
               target="_blank"
               rel="noopener noreferrer"
               className={buttonClasses({ variant: "primary", className: "mt-4 w-full sm:w-auto" })}
             >
-              {oneTime > 0 ? `Give $${oneTime} with PayPal` : "Give with PayPal"}
-              <ArrowUpRight aria-hidden className="size-4" />
+              <WhatsAppIcon className="size-4" />
+              {oneTime > 0 ? `Give $${oneTime} via WhatsApp` : "Give via WhatsApp"}
             </a>
           </div>
 

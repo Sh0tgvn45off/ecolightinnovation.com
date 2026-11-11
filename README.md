@@ -32,7 +32,7 @@ Most text lives in plain TypeScript files, so updates don't require touching pag
 | Impact stories (newest first) | `lib/content/stories.ts` |
 | Team and board | `lib/content/team.ts` |
 | Mission goals and values | `lib/content/mission.ts` |
-| Programs shown under "Solutions" | `lib/content/programs.ts` |
+| Energy-as-a-Service packages, prices, how it works, pilot, energy-gap stats | `lib/content/eaas.ts` |
 | Donation details (PayPal, mobile money, bank) | `lib/content/donate.ts` |
 | Impact calculator assumptions | `lib/impact.ts` |
 
@@ -50,14 +50,18 @@ webhook. By default that's the Google Apps Script the previous site used, so mes
 To send them somewhere else, set `CONTACT_WEBHOOK_URL` (see `.env.example`). The webhook receives a JSON body:
 `{ name, email, subject, message }`.
 
-## Deploying to Vercel
+## Deployment
 
-1. Import this GitHub repository at [vercel.com/new](https://vercel.com/new). The defaults for Next.js are correct.
-2. Optional: add `CONTACT_WEBHOOK_URL` under Project → Settings → Environment Variables.
-3. Under Project → Settings → Domains, add `www.ecolightinnovation.com` (and the bare domain), then update DNS at
-   your domain registrar as Vercel instructs.
-4. Once the domain points to Vercel, turn off GitHub Pages for this repository (Settings → Pages) and delete the
-   `CNAME` file.
+The site is hosted on Vercel and deploys automatically:
+
+- Every push to `main` goes live at [www.ecolightinnovation.com](https://www.ecolightinnovation.com).
+- Every pull request gets its own preview link from Vercel.
+
+The domain is registered at Namecheap (Advanced DNS), with an `A` record for `@` and a `CNAME` for `www` pointing to
+Vercel. Vercel → Project → Settings → Domains shows the exact values it expects and whether the setup is valid.
+The bare domain redirects to `www`.
+
+Optional: set `CONTACT_WEBHOOK_URL` under Vercel → Project → Settings → Environment Variables.
 
 Links to the old `.html` pages (for example `/about-us.html`) redirect to the new pages automatically.
 

@@ -13,6 +13,7 @@ import {
   type InquiryInput,
   type Interest,
 } from "@/lib/inquiry";
+import { kwacha, packages } from "@/lib/content/eaas";
 import { site } from "@/lib/site";
 import { cn } from "@/lib/utils";
 
@@ -56,6 +57,18 @@ export function InquiryForm({ className }: { className?: string }) {
   const heading = useRef<HTMLHeadingElement>(null);
   const firstRender = useRef(true);
   const sent = status.state === "sent";
+
+  // Arriving from a package's "Get this package" link (?package=basic etc.): pre-fill the topic and message.
+  useEffect(() => {
+    const id = new URLSearchParams(window.location.search).get("package");
+    const pkg = packages.find((p) => p.id === id);
+    if (!pkg) return;
+    setValues((v) => ({
+      ...v,
+      interest: "Solar subscription",
+      message: v.message || `I'm interested in the ${pkg.name} package (${kwacha(pkg.monthly)} a month).`,
+    }));
+  }, []);
 
   // Move focus to the step title (or the thank-you note) so screen readers announce the change.
   useEffect(() => {

@@ -17,3 +17,7 @@ next-env.d.ts
 # misc
 .DS_Store
 npm-debug.log*
+
+# private documents (business plans etc.) - never publish
+*.docx
+*.doc

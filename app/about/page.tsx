@@ -9,7 +9,7 @@ import { board, team } from "@/lib/content/team";
 export const metadata: Metadata = {
   title: "About us",
   description:
-    "Meet EcoLight Innovations: the team and board bringing sustainable solar lighting to rural communities in Zambia.",
+    "Meet EcoLight Innovations, a Zambian social enterprise making solar energy affordable through monthly subscriptions, and the team and board behind it.",
 };
 
 export default function AboutPage() {
@@ -18,7 +18,7 @@ export default function AboutPage() {
       <PageHero
         eyebrow="About EcoLight"
         title="Sustainable technology, built around communities."
-        lead="We're a Zambian initiative harnessing solar power to uplift vulnerable rural communities: more light, better learning, stronger livelihoods."
+        lead="We're a Zambian social enterprise making reliable solar energy affordable through monthly subscriptions: more light, better learning, stronger livelihoods."
       />
 
       <Section id="about-ecolight" className="pt-0 md:pt-0">
@@ -26,23 +26,26 @@ export default function AboutPage() {
           <Reveal className="lg:col-span-7">
             <div className="space-y-6 text-lg leading-relaxed text-platinum">
               <p className="text-2xl font-medium leading-snug tracking-tight text-white md:text-3xl text-balance">
-                EcoLight Innovations was founded with a single vision: use sustainable technology to uplift vulnerable rural
-                communities.
+                EcoLight Innovation Zambia is a social enterprise building a Solar Energy-as-a-Service business for households
+                and small businesses.
               </p>
               <p>
-                Based in Lusaka, we know the challenges facing communities without reliable electricity. Our mission goes beyond
-                providing light. We aim to foster economic growth, expand educational opportunity and improve health through
-                sustainable energy.
+                Based in Lusaka, we know the challenges facing communities without reliable electricity. Many families want
+                solar, but the cost of buying a complete system keeps it out of reach. That affects household life, children&apos;s
+                study time after sunset, and whether small businesses can operate consistently.
               </p>
               <p>
-                We believe access to clean, affordable energy is a fundamental human right and a cornerstone of development. Solar
-                lighting helps communities break free from energy poverty, rely less on harmful and expensive fossil fuels, and
-                build a brighter, healthier future. Every project is community-centred: technically sound, culturally
-                appropriate and economically viable for the long term.
+                So instead of selling systems, we provide them as a service. Customers pay an affordable monthly subscription,
+                and EcoLight retains ownership of the core equipment: solar panels, batteries, inverters or charge controllers,
+                protection components, wiring and lights. We arrange installation and provide ongoing monitoring, maintenance
+                and technical support. Lighting comes first in every package, and appliances such as TVs, fans and
+                refrigerators are available separately for customers who want them.
               </p>
               <p>
-                Sustainability is at the core of everything we do, from the materials we source to how we install them. We train
-                local people and build local capacity, so the benefits of our work are sustained by the communities themselves.
+                We believe access to clean, affordable energy is a cornerstone of development. Our aim is a financially
+                sustainable enterprise that combines commercial viability with measurable social impact: expanding dependable
+                solar energy across Zambia, creating local jobs, and contributing to the country&apos;s transition to cleaner,
+                more accessible energy.
               </p>
             </div>
           </Reveal>

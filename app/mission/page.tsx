@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { GraduationCap, Leaf, Sparkles, Store, Users, Zap, type LucideIcon } from "lucide-react";
 import { ClosingCta } from "@/components/home/closing-cta";
+import { EnergyGap } from "@/components/home/energy-gap";
+import { pilot } from "@/lib/content/eaas";
 import { ButtonLink } from "@/components/ui/button";
 import { Reveal, RevealGroup, RevealItem } from "@/components/ui/reveal";
 import { PageHero, Section, SectionHeader } from "@/components/ui/section";
@@ -10,7 +12,7 @@ import { goals, values, type Goal } from "@/lib/content/mission";
 export const metadata: Metadata = {
   title: "Our mission",
   description:
-    "Sustainable, affordable and reliable solar energy for vulnerable rural communities in Zambia, starting in Chilumba, Central Province.",
+    "Reliable, affordable solar energy for households and small businesses in Zambia, delivered as a monthly subscription. Starting in Chilumba, Central Province.",
 };
 
 const icons: Record<Goal["icon"], LucideIcon> = {
@@ -28,10 +30,10 @@ export default function MissionPage() {
       <PageHero
         eyebrow="Our mission"
         title="End energy poverty, one community at a time."
-        lead="Sustainable, affordable and reliable solar energy for vulnerable rural communities in Zambia. Starting in Chilumba, Central Province."
+        lead="Reliable, affordable solar energy for households and small businesses across Zambia, delivered as a service. Starting in Chilumba, Central Province."
       >
-        <ButtonLink href="/donate" variant="photon">
-          Support the mission
+        <ButtonLink href="/#how-it-works" variant="photon">
+          How our model works
         </ButtonLink>
         <ButtonLink href="/impact" variant="glass" chevron>
           See our progress
@@ -49,9 +51,14 @@ export default function MissionPage() {
                 creating a brighter future for all.
               </p>
               <p>
-                We envision a world where every community has fair access to clean energy, so people can thrive, learn and grow
-                without harming the environment. Our work is guided by environmental stewardship, social equity and economic
-                empowerment.
+                The biggest barrier isn&apos;t willingness. It&apos;s the upfront cost of a solar system. So we offer solar as a
+                monthly subscription: EcoLight owns the equipment, installs it and keeps it running, and customers pay for
+                reliable light and energy rather than hardware.
+              </p>
+              <p>
+                We&apos;re starting with a pilot of {pilot.systems} solar systems in Chilumba, building on our community
+                lighting work there. It will test demand, affordability, system performance and service before we expand to
+                other rural, peri-urban and urban communities across Zambia.
               </p>
             </div>
           </Reveal>
@@ -86,6 +93,8 @@ export default function MissionPage() {
           </Reveal>
         </div>
       </Section>
+
+      <EnergyGap />
 
       <Section className="bg-gradient-to-b from-black via-obsidian-900 to-black">
         <SectionHeader

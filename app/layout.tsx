@@ -12,20 +12,22 @@ const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"]
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: `${site.name}: Solar light for rural Zambia`,
+    default: `${site.name}: Solar Energy-as-a-Service for Zambia`,
     template: `%s · ${site.name}`,
   },
   description: site.description,
   applicationName: site.name,
   keywords: [
+    "solar energy as a service",
+    "solar subscription",
+    "solar home system",
     "solar lighting",
     "Zambia",
+    "off-grid energy",
     "rural electrification",
-    "clean energy",
     "Chilumba",
     "energy access",
-    "climate education",
-    "nonprofit",
+    "social enterprise",
   ],
   openGraph: {
     type: "website",
@@ -50,8 +52,9 @@ export const viewport: Viewport = {
 
 const organizationJsonLd = {
   "@context": "https://schema.org",
-  "@type": "NGO",
+  "@type": "Organization",
   name: site.name,
+  description: site.description,
   url: site.url,
   logo: `${site.url}/images/brand/logo-mark-trim.png`,
   email: site.email,

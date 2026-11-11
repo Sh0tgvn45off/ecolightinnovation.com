@@ -12,12 +12,12 @@ export function ClosingCta() {
         <Reveal className="mx-auto max-w-3xl text-center">
           <h2 className="text-display-lg font-semibold text-gradient text-balance">Every light starts with someone.</h2>
           <p className="mx-auto mt-6 max-w-xl text-lg text-platinum text-pretty">
-            A donation, a partnership or a single introduction can bring clean light to a family that still studies by
-            kerosene.
+            A subscription, a partnership or funding for our Chilumba pilot can bring clean light to a family that still
+            studies by kerosene.
           </p>
           <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
-            <ButtonLink href="/donate" variant="photon" size="lg">
-              Donate
+            <ButtonLink href="/#packages" variant="photon" size="lg">
+              See packages
             </ButtonLink>
             <ButtonLink href="/contact#inquire" variant="glass" size="lg">
               Partner with us

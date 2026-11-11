@@ -112,9 +112,9 @@ export function Bento() {
           <TileIcon>
             <Banknote aria-hidden className="size-5" />
           </TileIcon>
-          <h3 className="text-2xl font-semibold tracking-tight text-white">Pay over time.</h3>
+          <h3 className="text-2xl font-semibold tracking-tight text-white">Pay monthly.</h3>
           <p className="mt-3 text-sm leading-relaxed text-platinum">
-            Flexible installment plans put solar lighting within reach of rural families and traders.
+            A subscription instead of a big upfront cost. EcoLight owns, maintains and supports the system.
           </p>
         </Tile>
 

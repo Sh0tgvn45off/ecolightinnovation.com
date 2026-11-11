@@ -6,6 +6,7 @@ import { ButtonLink, buttonClasses } from "@/components/ui/button";
 import { CopyButton } from "@/components/ui/copy-button";
 import { RevealGroup, RevealItem } from "@/components/ui/reveal";
 import { donation } from "@/lib/content/donate";
+import { pilot } from "@/lib/content/eaas";
 import { site } from "@/lib/site";
 import { cn } from "@/lib/utils";
 
@@ -203,8 +204,8 @@ export function DonationOptions() {
         <div>
           <CardHeader
             icon={<Handshake aria-hidden className="size-5" />}
-            title="Partnerships & corporate giving"
-            body="CSR programs, grants or strategic partnerships: let's design something that lights up a whole community."
+            title="Partnerships, grants & seed funding"
+            body={`Grants, seed funding, CSR or strategic partnerships: help us launch our ${pilot.systems}-system solar pilot in ${pilot.location} and grow from there.`}
           />
         </div>
         <ButtonLink href="/contact#inquire" variant="photon" chevron className="mt-7 self-start lg:mt-0 lg:self-center">

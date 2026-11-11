@@ -26,7 +26,7 @@ export function Hero() {
       <div className="container relative">
         <div className="mx-auto max-w-4xl text-center">
           <motion.p {...rise(0.05)} className="eyebrow mb-5">
-            EcoLight Innovations · Zambia
+            Solar Energy-as-a-Service · Zambia
           </motion.p>
           <motion.h1 {...rise(0.15)} className="text-display-xl font-semibold text-balance">
             <span className="text-gradient">Light, beyond</span>{" "}
@@ -36,15 +36,15 @@ export function Hero() {
             {...rise(0.3)}
             className="mx-auto mt-7 max-w-2xl text-lg leading-relaxed text-platinum md:text-[1.375rem] md:leading-relaxed text-pretty"
           >
-            Clean, affordable solar lighting for rural homes, schools and small businesses. Starting in{" "}
-            {site.firstCommunity}.
+            Reliable solar power by monthly subscription, for rural homes and small businesses. We install it, own it and
+            keep it running. Starting in {site.firstCommunity}.
           </motion.p>
           <motion.div {...rise(0.45)} className="mt-10 flex flex-wrap items-center justify-center gap-3">
-            <ButtonLink href="/#solutions" size="lg">
-              Explore our solutions
+            <ButtonLink href="/#packages" size="lg">
+              See packages
             </ButtonLink>
-            <ButtonLink href="/#calculator" variant="glass" size="lg">
-              Estimate the impact
+            <ButtonLink href="/#how-it-works" variant="glass" size="lg">
+              How it works
             </ButtonLink>
           </motion.div>
         </div>

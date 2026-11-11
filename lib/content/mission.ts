@@ -7,7 +7,7 @@ export interface Goal {
 export const goals: Goal[] = [
   {
     title: "Expand access to clean energy",
-    body: "Deploy solar lighting units and micro-grid systems to reach unserved households and public facilities like schools and health clinics.",
+    body: "Remove the upfront-cost barrier with solar subscriptions, reaching unserved households, small businesses and public facilities like schools and clinics.",
     icon: "zap",
   },
   {

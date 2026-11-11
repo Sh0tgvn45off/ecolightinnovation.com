@@ -2,9 +2,11 @@
  * Inquiry form schema, shared by the browser (instant feedback) and /api/contact (the real check).
  */
 export const INTERESTS = [
+  "Solar subscription",
+  "Appliances",
   "Partnership",
+  "Funding or investment",
   "Donation",
-  "Solar for my home or shop",
   "Volunteering",
   "Media",
   "Something else",

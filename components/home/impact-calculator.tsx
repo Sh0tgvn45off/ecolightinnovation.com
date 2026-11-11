@@ -180,8 +180,8 @@ export function ImpactCalculator() {
             factor), every night of the year. Adjust the kerosene price to match your area.
           </span>
         </p>
-        <ButtonLink href="/donate" variant="photon" chevron className="shrink-0">
-          Help light more homes
+        <ButtonLink href="/#packages" variant="photon" chevron className="shrink-0">
+          Find your package
         </ButtonLink>
       </Reveal>
     </Section>

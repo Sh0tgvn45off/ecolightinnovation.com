@@ -14,7 +14,8 @@ export function Footer() {
           <div className="md:col-span-4 lg:col-span-3">
             <Wordmark />
             <p className="mt-5 max-w-xs text-sm leading-relaxed text-platinum">
-              Clean, affordable solar light for rural Zambian homes, schools and small businesses.
+              Solar Energy-as-a-Service for rural Zambian homes and small businesses: reliable light and power by monthly
+              subscription.
             </p>
             <p className="mt-2 text-sm font-medium text-white/90">{site.tagline}.</p>
             <div className="mt-6 flex gap-2">
@@ -87,6 +88,11 @@ export function Footer() {
             <span className="text-platinum">Impact figures.</span> Calculator results on this site are estimates based on the
             assumptions shown beside them (typical kerosene wick-lamp use and the IPCC emission factor for kerosene). Actual
             savings vary by household, lamp and local fuel price.
+          </p>
+          <p>
+            <span className="text-platinum">Packages and pricing.</span> Subscription prices and system designs are for the
+            Chilumba pilot and are preliminary. Final equipment specifications, prices and terms are confirmed in each
+            customer&apos;s agreement before installation.
           </p>
           <p>
             <span className="text-platinum">Donations.</span> Every contribution goes towards solar lighting, education and

@@ -4,7 +4,7 @@ export const site = {
   legalName: "EcoLight Innovations Zambia",
   tagline: "Brightening Lives, Transforming Communities",
   description:
-    "EcoLight Innovations brings clean, affordable solar lighting to rural Zambian homes, schools and small businesses, starting in Chilumba, Central Province.",
+    "EcoLight Innovations is a Zambian social enterprise offering Solar Energy-as-a-Service: reliable solar lighting and power by affordable monthly subscription for rural homes and small businesses, starting in Chilumba, Central Province.",
   url: "https://www.ecolightinnovation.com",
   email: "ecolight.zm@gmail.com",
   phone: {
@@ -24,8 +24,9 @@ export const site = {
 export type NavLink = { label: string; href: string };
 
 export const navLinks: NavLink[] = [
+  { label: "How it works", href: "/#how-it-works" },
+  { label: "Packages", href: "/#packages" },
   { label: "Mission", href: "/mission" },
-  { label: "Solutions", href: "/#solutions" },
   { label: "Impact", href: "/impact" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
@@ -44,7 +45,8 @@ export const footerColumns: { title: string; links: NavLink[] }[] = [
   {
     title: "Work",
     links: [
-      { label: "Solutions", href: "/#solutions" },
+      { label: "How it works", href: "/#how-it-works" },
+      { label: "Packages & pricing", href: "/#packages" },
       { label: "Impact stories", href: "/impact" },
       { label: "Impact calculator", href: "/#calculator" },
       { label: "Climate education", href: "/impact#capacity-building" },
@@ -53,9 +55,9 @@ export const footerColumns: { title: string; links: NavLink[] }[] = [
   {
     title: "Get involved",
     links: [
+      { label: "Get solar", href: "/contact#inquire" },
+      { label: "Partner or fund the pilot", href: "/contact#inquire" },
       { label: "Donate", href: "/donate" },
-      { label: "Monthly giving", href: "/donate#give" },
-      { label: "Partner with us", href: "/contact#inquire" },
       { label: "Contact", href: "/contact" },
     ],
   },

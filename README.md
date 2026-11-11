@@ -50,14 +50,18 @@ webhook. By default that's the Google Apps Script the previous site used, so mes
 To send them somewhere else, set `CONTACT_WEBHOOK_URL` (see `.env.example`). The webhook receives a JSON body:
 `{ name, email, subject, message }`.
 
-## Deploying to Vercel
+## Deployment
 
-1. Import this GitHub repository at [vercel.com/new](https://vercel.com/new). The defaults for Next.js are correct.
-2. Optional: add `CONTACT_WEBHOOK_URL` under Project → Settings → Environment Variables.
-3. Under Project → Settings → Domains, add `www.ecolightinnovation.com` (and the bare domain), then update DNS at
-   your domain registrar as Vercel instructs.
-4. Once the domain points to Vercel, turn off GitHub Pages for this repository (Settings → Pages) and delete the
-   `CNAME` file.
+The site is hosted on Vercel and deploys automatically:
+
+- Every push to `main` goes live at [www.ecolightinnovation.com](https://www.ecolightinnovation.com).
+- Every pull request gets its own preview link from Vercel.
+
+The domain is registered at Namecheap, with DNS pointing to Vercel (`A @ → 76.76.21.21`,
+`CNAME www → cname.vercel-dns.com`). The bare domain redirects to `www`. Domains are managed under Vercel →
+Project → Settings → Domains.
+
+Optional: set `CONTACT_WEBHOOK_URL` under Vercel → Project → Settings → Environment Variables.
 
 Links to the old `.html` pages (for example `/about-us.html`) redirect to the new pages automatically.
 

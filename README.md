@@ -57,9 +57,9 @@ The site is hosted on Vercel and deploys automatically:
 - Every push to `main` goes live at [www.ecolightinnovation.com](https://www.ecolightinnovation.com).
 - Every pull request gets its own preview link from Vercel.
 
-The domain is registered at Namecheap, with DNS pointing to Vercel (`A @ → 76.76.21.21`,
-`CNAME www → cname.vercel-dns.com`). The bare domain redirects to `www`. Domains are managed under Vercel →
-Project → Settings → Domains.
+The domain is registered at Namecheap (Advanced DNS), with an `A` record for `@` and a `CNAME` for `www` pointing to
+Vercel. Vercel → Project → Settings → Domains shows the exact values it expects and whether the setup is valid.
+The bare domain redirects to `www`.
 
 Optional: set `CONTACT_WEBHOOK_URL` under Vercel → Project → Settings → Environment Variables.
 
